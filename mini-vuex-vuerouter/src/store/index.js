@@ -13,6 +13,10 @@ const store = createStore({
       state.test = 222
       console.log(state)
     }
+  },
+
+  getters:{
+    
   }
 })
 

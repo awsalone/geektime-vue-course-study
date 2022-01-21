@@ -20,10 +20,8 @@ class Store {
     this._actions = options.actions
     this.getters = {}
     Object.keys(options.getters).forEach(name => {
-      let fn = options.getters[name]
-      this.getters[name] = computed(()=>{
-        fn(this.state)
-      })
+      const fn = options.getters[name]
+      this.getters[name] = computed(() => fn(this.state))
     })
   }
 
